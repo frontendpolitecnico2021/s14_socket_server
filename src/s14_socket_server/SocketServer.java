@@ -9,7 +9,11 @@ import java.net.SocketTimeoutException;
 
 /**
  * SocketServer --- Programa que actua como servidor de peticiones del Banco Politécnico.
- * @author   SubGrupo 16 - Persistencia de Datos
+ * @author Martinez Alzate John Alejandro
+ * @author Norena Arenas Yeferson Eduardo
+ * @author Ortiz Gutierrez Raul Enrique
+ * @author Salazar Gallego Kevin De Jesus
+ * @author Fajardo Barragan Leidy Marcela
  * 
  */
 
@@ -27,7 +31,8 @@ public class SocketServer extends Thread {
 	   
 	   /**
 	    * Constructor de la clase SocketServer
-	    * @param int port. Puerto de ejecución del servidor de sockets
+	    * @param port. Puerto de ejecución del servidor de sockets
+	    * @throws IOException - Lanza error en caso de que la lectura de información por terminal falle
 	    * */
 	   public SocketServer(int port) throws IOException {
 	      serverSocket = new ServerSocket(port);	    
@@ -81,6 +86,7 @@ public class SocketServer extends Thread {
 	   }// Cierra método run
 	   /**
 	    * Método para iniciar la aplicación
+	    * @param args - Parametros que puede recibir para iniciar la aplicación
 	    * */
 	   public static void main(String [] args) {		   
 	
